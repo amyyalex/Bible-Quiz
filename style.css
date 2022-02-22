@@ -494,7 +494,7 @@ footer .next-btn:hover{
 		display: none;
 	}
 
-	
+
 	/*result box*/
 	.result-box{
 		width: 330px;
@@ -510,7 +510,7 @@ footer .next-btn:hover{
 	}
 
 	.result-box .bottom-btn button{
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	
