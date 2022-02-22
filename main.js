@@ -1,5 +1,6 @@
 //getting all the required elements
 const start_btn = document.querySelector(".start-btn button");
+const welcome_box = document.querySelector(".welcome-box");
 const content_box = document.querySelector(".content-box");
 const exit_btn = content_box.querySelector(".bottom-btn .quit");
 const continue_btn = document.querySelector(".bottom-btn .restart");
@@ -11,8 +12,11 @@ const timeOff = quiz_box.querySelector("header .time-text");
 
 const option_list = document.querySelector(".option-list");
 
+
+
 //when start quiz button is clicked
 start_btn.onclick = ()=>{
+	welcome_box.classList.remove("activeWelcome");//hides the welcome box
 	content_box.classList.add("activeContent");//show the content box
 } 
 

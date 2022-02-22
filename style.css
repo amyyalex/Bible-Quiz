@@ -19,16 +19,7 @@ body{
 	background-position: center;
 }
 
-/*.headline{
-	font-family: 'The Nautigal', cursive;
-	font-size: 40px;
-	font-weight: 600;
-	text-align: center;
-	padding-top: 50px;
-	text-transform: uppercase;
-}*/
-
-.start-btn,
+.welcome-box,
 .content-box,
 .quiz-box,
 .result-box {
@@ -40,7 +31,9 @@ body{
 	            0px 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+
 .content-box.activeContent,
+.welcome-box.activeWelcome,
 .quiz-box.activeQuiz,
 .result-box.activeResult{
 	z-index: 5;
@@ -49,7 +42,7 @@ body{
 	opacity: 1;
 }
 
-/*Start button styling*/
+/*Start button styling
 .start-btn button{
 	color: #70B650;
 	font-size: 20px;
@@ -58,10 +51,69 @@ body{
 	border-radius: 5px;
 	background: #fff;
 	cursor: pointer;
+}*/
+
+/*welcome box styling*/
+.welcome-box{
+	width: 550px;
+	padding: 25px 30px;
+	background: #C5EDB3;
+	border-radius: 5px;
+
+}
+
+.welcome-image{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.welcome-content h1{
+	text-align: center;
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.welcome-content span{
+	color: #45A419;
+	font-size: 30px;
+	font-family: 'Ubuntu', cursive;
+	text-transform: uppercase;
+}
+
+.welcome-content p{
+	text-align: center;
+	font-size: 18px;
+	padding-bottom: 8px;
+}
+
+.welcome-content p.second{
+	text-align: center;
+	font-size: 16px;
+}
+
+.start-btn{
+	text-align: center;
+}
+
+.start-btn button{	
+	color: #70B650;
+ 	font-size: 16px;
+ 	font-weight: 500;
+	height: 30px;
+ 	width: 100px;
+ 	border: 1px solid #70B650;
+ 	border-radius: 5px;
+ 	cursor: pointer;
+ }
+
+.start-btn button:hover{
+	background: #70B650;
+	color: #fff;
 }
 
 /*content box styling*/
 .content-box {
+	
 	width: 540px;
 	background: #C5EDB3;
 	border-radius: 5px;
@@ -137,6 +189,7 @@ body{
 
  /*quiz box styling*/
  .quiz-box {
+ 	
  	width: 550px;
  	background: #fff;
 	border-radius: 5px;
@@ -326,6 +379,7 @@ footer .next-btn:hover{
 
  /*result box styling*/
 .result-box{
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -383,6 +437,30 @@ footer .next-btn:hover{
 
 /*making it responsive*/
 @media(max-width: 768px){
+	/*welcome box*/
+	.welcome-box{
+		width: 430px;
+	}
+	.welcome-content h1{
+		font-size: 25px;
+	}
+	.welcome-content span{
+		font-size: 20px;
+	}
+	.welcome-content p{
+		font-size: 15px;
+	}
+	.welcome-content .line{
+		display: none;
+	}
+	.welcome-content p.second{
+		text-align: center;
+		font-size: 14px;
+	}
+	.start-btn button{		
+	 	font-size: 14px;
+	}
+
 	/*content box*/
 	.content-box {
 		width: 420px;
@@ -434,7 +512,7 @@ footer .next-btn:hover{
 	}
 
 	.result-box .bottom-btn button{
-		font-size: 13px;
+		font-size: 16px;
 	}
 
 	
