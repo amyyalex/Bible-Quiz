@@ -16,13 +16,15 @@ const option_list = document.querySelector(".option-list");
 
 //when start quiz button is clicked
 start_btn.onclick = ()=>{
-	welcome_box.classList.remove("activeWelcome");//hides the welcome box
 	content_box.classList.add("activeContent");//show the content box
+	welcome_box.style.display = "none"; //hides the welcome box
 } 
 
 //when exit quiz button is clicked
 exit_btn.onclick = ()=>{
 	content_box.classList.remove("activeContent");//hides the content box
+	welcome_box.style.display = "block"; //hides the welcome box
+	
 } 
 
 //when continue quiz button is clicked
@@ -31,7 +33,7 @@ continue_btn.onclick = ()=>{
 	quiz_box.classList.add("activeQuiz");//shows the quiz box
 	showQuestions(0);
 	queCounter(1);
-	startTimer(20);
+	startTimer(15);
 	startTimerLine(0);
 } 
 
@@ -39,7 +41,7 @@ let que_count = 0;
 let que_numb = 1;
 let counter;
 let counterLine;
-let timeValue = 20;
+let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
 
@@ -53,7 +55,7 @@ restart_quiz.onclick = ()=>{
 	quiz_box.classList.add("activeQuiz");
 	let que_count = 0;
 	let que_numb = 1;
-	let timeValue = 20;
+	let timeValue = 15;
 	let widthValue = 0;
 	let userScore = 0;
 	showQuestions(que_count);
@@ -196,7 +198,7 @@ function startTimer(time){
 }
 
 function startTimerLine(time){
-	counterLine = setInterval(timer, 38); //38 is a time in milliseconds that means the timer function will run after every 38 ms 
+	counterLine = setInterval(timer, 29); //29 is a time in milliseconds that means the timer function will run after every 29 ms 
 	function timer(){
 		time += 1;
 		timeLine.style.width = time + "px";
